@@ -34,7 +34,7 @@ button.addEventListener("click", function() {
 		clickValue = 1;		
 	}
 	bank += clickValue; // lägg till värdet vid click
-	scoreText.textContent = "Points: " + bank; // sätt textvärdet i p elementet till bank.
+	scoreText.textContent = "Points: " + Math.floor(bank); // sätt textvärdet i p elementet till bank.
 }, true);
 
 /* kod för zebrapowerup med räknare */
@@ -42,12 +42,12 @@ zebraButton.addEventListener("click", function() {
 	if (bank >= zebraCost && zebraTimer == 0) {
 		bank -= zebraCost;
 		zebraTimer += 10;
-		powerText.textContent = +"Köpte zebra\n";
+		powerText.textContent += "Köpte zebra\n";
 
 		// Lägg till setInterval med en funktion som laddas varje sekund
 		zebra = setInterval(function() {
 			bank += 10;
-			scoreText.textContent = "Points: " + bank;
+			scoreText.textContent = "Points: " + Math.floor(bank);
 			zebraTimer--;
 
 			if (zebraTimer == 0) {
@@ -67,7 +67,7 @@ lionButton.addEventListener("click", function() {
 	if (bank >= lejonCost) {
 		clickValue *= 2;
 		bank -= lejonCost;
-		lejonCost *= 2;
+		lejonCost *= 1.4;
 		lejonClicks += 10;
 
 		// FIXA för superlejon!
@@ -76,9 +76,9 @@ lionButton.addEventListener("click", function() {
 			lionSuper.style.display = "inline";	// visa knappen
 		}
 
-		lionButton.textContent = "Lejon " + lejonCost;
+		lionButton.textContent = "Lejon " + Math.floor(lejonCost);
 		powerText.textContent += "Köpte lejon\n";
-		scoreText.textContent = "Points: " + bank; // sätt textvärdet i p elementet till bank.
+		scoreText.textContent = "Points: " + Math.floor(bank); // sätt textvärdet i p elementet till bank.
 	} else {
 		powerText.textContent += "Du har inte råd med lejon\n";
 	}
@@ -90,7 +90,7 @@ lionSuper.addEventListener("click", function() {
 	bank = bank * 10;
 	superLionPurchased = 1;
 	powerText.textContent += "DU KÖPTE SUPERLEJON!\n";
-	scoreText.textContent = "Points: " + bank;
+	scoreText.textContent = "Points: " + Math.floor(bank);
 }, true);
 
 scoreDiv.appendChild(scoreText); // fäst p elementet i score diven.
