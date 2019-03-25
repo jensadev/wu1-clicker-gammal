@@ -1,61 +1,32 @@
-html {
-	font-size: 16px;
-}
+/* RGB  https://coolors.co/e0e0e2-81d2c7-b5bad0-7389ae-416788 
+
+font-family: 'Open Sans', sans-serif;
+font-family: 'Titillium Web', sans-serif;
+
+*/
 
 body {
-	font-family: 'Open Sans', sans-serif;
-	font-size: 62.5%;
-	background-color: #7E8987;
+	background-color: #000;
 }
 
-main {
-	width: 80%;
-	margin: 0 auto;
+.navbar-custom {
+	background-color: #222222;
+	font-family: 'Titillium Web', sans-serif;
+	font-weight: 300;
+	letter-spacing: 0.03rem;
 }
 
-h1, h2 {
-	font-family: 'Permanent Marker', cursive;
-	letter-spacing: .4rem;
-}
-
-h1 {
-	font-size: 6em;
-}
-
-h2 {
-	font-size: 4em;
-	border-bottom: 1px solid grey;
-}
-
-p {
-	font-size: 2em;
-}
-
-.menu ul {
-	margin: 0px;
-	padding: 0px;
-	list-style: none;
-}
-
-.menu li {
-	display: inline;
-	font-size: 4em;
-	text-align: center;
-	padding-right: 20px;
-}
-
-.menu a {
-	text-decoration: none;
-	font-weight: 800;
-}
-
-.menu a:hover {
-	border-bottom: 4px solid grey;
-}
-
-article {
+section {
 	height: 100vh;
-	padding-bottom: 80px;
+	background-image: url('../img/boll-1.png');
+	background-size: cover;
+	background-position: center;
+	background-position-x: center;
+	background-repeat: no-repeat;
+}
+
+.sec {
+	padding-top: 100px;
 }
 
 #game, #score{
@@ -69,22 +40,15 @@ article {
 
 #clickerbutton {
 	font-size: 6em;
-	width:300px;
-	height:300px;
-	border-radius: 200px;
-	background-color: #EB5508;
+	background-image: url('../img/bjutt.png');
+	background-color: transparent;
+	color: #f0f0f0;
 	font-family: 'Permanent Marker', cursive;
 	letter-spacing: .4rem;
-	color: white;
-	border:0px solid #7E8987;
+	border: 0px;
 }
 
-#clickerbutton:active {
-	transition-property: border, background-color;
-	transition-duration: 1s;
-	background-color: #812F05;
-	border: 40px solid #7E8987;
-}
+
 #clickerbutton:focus {
 	outline: 0px;
 }
@@ -101,7 +65,7 @@ footer {
     bottom: 0;
     width: 100%;
     text-align: center;
-    background-color: rgba(51,51,51,0.8);
+    background-color: #222222;
 }
 
 #lionSuper {
