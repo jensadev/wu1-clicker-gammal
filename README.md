@@ -1,6 +1,5 @@
 # clicker
 
-Latest files for clicker project.
-Go ahead and clone the project if you need the latest changes to the code.
+Filerna för clickerprojektet för er som vill arbeta med det.
 
-You can also find the files on the local webserver. See classroom.
+Det finns en ytterligare branch, update med ett NTI tema om ni vill anväda det.
