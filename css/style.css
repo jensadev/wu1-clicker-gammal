@@ -7,6 +7,7 @@ font-family: 'Titillium Web', sans-serif;
 
 body {
 	background-color: #000;
+	color: #f0f0f0;
 }
 
 .navbar-custom {
@@ -40,14 +41,19 @@ section {
 
 #clickerbutton {
 	font-size: 6em;
-	background-image: url('../img/bjutt.png');
+	background-image: url('../img/button.png');
 	background-color: transparent;
 	color: #f0f0f0;
-	font-family: 'Permanent Marker', cursive;
-	letter-spacing: .4rem;
 	border: 0px;
+	height: 500px;
+	width: 500px;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
+#clickerbutton:active {
+	background-size: contain;
+}
 
 #clickerbutton:focus {
 	outline: 0px;

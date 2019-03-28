@@ -22,8 +22,8 @@ let superLionPurchased = 0;
 
 /* Startvärden för eleement, text */
 scoreText.textContent = "Points: 0";
-lionButton.textContent = "Lejon " + lejonCost;
-zebraButton.textContent = "Zebra " + zebraCost;
+lionButton.textContent = "Elev " + lejonCost;
+zebraButton.textContent = "Lärare " + zebraCost;
 
 /* click event + logic */
 button.addEventListener("click", function() {
@@ -42,7 +42,7 @@ zebraButton.addEventListener("click", function() {
 	if (bank >= zebraCost && zebraTimer == 0) {
 		bank -= zebraCost;
 		zebraTimer += 10;
-		powerText.textContent += "Köpte zebra\n";
+		powerText.textContent += "Köpte lärare\n";
 
 		// Lägg till setInterval med en funktion som laddas varje sekund
 		// zebran använder en timer och fungerar under en period
@@ -52,14 +52,14 @@ zebraButton.addEventListener("click", function() {
 			zebraTimer--;
 
 			if (zebraTimer == 0) {
-				powerText.textContent += "Slut på zebra\n";
+				powerText.textContent += "Slut på lärare\n";
 				clearInterval(zebra);  // kalla på clearInterval för att rensa setInterval
 			}
 		}, 1000);
 	} else if (zebraTimer > 0) {
-		powerText.textContent += "Du har redan zebra\n";
+		powerText.textContent += "Du har redan lärare\n";
 	} else {
-		powerText.textContent += "Du har inte råd med zebra\n";
+		powerText.textContent += "Du har inte råd med lärare\n";
 	}
 }, true);
 
@@ -78,11 +78,11 @@ lionButton.addEventListener("click", function() {
 			lionSuper.style.display = "inline";	// visa knappen
 		}
 
-		lionButton.textContent = "Lejon " + Math.floor(lejonCost);
-		powerText.textContent += "Köpte lejon\n";
+		lionButton.textContent = "Elev " + Math.floor(lejonCost);
+		powerText.textContent += "Köpte elev\n";
 		scoreText.textContent = "Points: " + Math.floor(bank); // sätt textvärdet i p elementet till bank.
 	} else {
-		powerText.textContent += "Du har inte råd med lejon\n";
+		powerText.textContent += "Du har inte råd med elev\n";
 	}
 }, true);
 
