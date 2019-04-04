@@ -3,6 +3,7 @@ let game = document.getElementById("game");
 let bank = 0;
 let clickvalue = 1;
 let powerupvalue = 0;
+let gurka = 10;
 
 let clickButton = document.getElementById("clicker");
 clickButton.addEventListener('click', () => {
@@ -11,9 +12,10 @@ clickButton.addEventListener('click', () => {
 
 let powerup = document.getElementById("powerup");
 powerup.addEventListener('click', () => {
-    if (bank >= 10) {
-        bank -= 10;
+    if (bank >= gurka) {
+        bank -= gurka;
         powerupvalue++;
+        gurka = gurka * 10;
     }
 });
 
