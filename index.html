@@ -4,64 +4,86 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">  
 	<title>Clicker</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" type="text/css" href="normalize.css">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800|Permanent+Marker" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:800|Titillium+Web:300,400,600" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+	<nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+		<a class="navbar-brand" href="#">
+			<img src="img/logo.png" height="40">
+		</a>
+		<button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div id="my-nav" class="collapse navbar-collapse">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="#game">Game <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#about">About</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
 	<main>
-		<!-- huvudmeny -->
-		<header class="top">
-			<h1 class="logo">Clicker</h1>
-			<!-- https://www.w3schools.com/css/css_navbar.asp -->
-			<nav class="menu">
-				<ul>
-					<li><a href="#welcome">Welcome</a></li>
-					<li><a href="#clicker">Game</a></li>
-					<li><a href="#about">About</a></li>
-				</ul>
-			</nav>
-		</header>
-		<!-- innehåll -->
-		<section>
-			<article id="welcome">
-				<header>
+		<section class="py-0 my-0" id="welcome">
+			<div class="container sec">
+				<div class="row">
 					<h2>Welcome</h2>
 					<p>Posted at <time>2018-01-19</time></p>
-				</header>
-				<button id="testknapp">Testknapp</button>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam ullam a iusto, tempora quas expedita nemo, doloremque, incidunt eveniet architecto molestiae voluptatibus quae quaerat hic possimus? Eius, a ab quis.</p>
-			</article>
-			<article id="clicker">
-				<header>
+				</div>
+				<div class="row">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam ullam a iusto, tempora quas expedita nemo, doloremque, incidunt eveniet architecto molestiae voluptatibus quae quaerat hic possimus? Eius, a ab quis.</p>
+				</div>
+			</div>
+		</section>
+		<section class="py-0 my-0" id="game">
+			<div class="container sec">
+				<div class="row">
 					<h2>Game</h2>
 					<p>Posted at <time>2018-01-19</time></p>
-				</header>
-				<p><quote>"Instant gratification"</quote> - Hampus 2018</p>
-				<div id="game">
-					<button id="clickerbutton">ZOO!</button>
 				</div>
-				<div id="score"></div>
-				<div id="powerUps">
-					<button id="lejon" class="powerUpButton" accesskey="l">Lejon</button>
-					<button id="lionSuper" class="powerUpButton" accesskey="s">Super Lion!</button>
-					<button id="zebra" class="powerUpButton" accesskey="z">Zebra</button>					
-					<p id="powerText"></p>
+				<div class="row">
+					<div class="col">
+						<p><quote>"Instant gratification"</quote> - Hampus 2018</p>
+					</div>
 				</div>
-			</article>
-			<article id="about">
-				<header>
+				<div class="row">
+					<div class="col">
+						<button id="clickerbutton">&nbsp;</button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-6" id="score"></div>
+					<div class="col-6" id="powerUps">
+						<button id="lejon" class="powerUpButton" accesskey="l">Lejon</button>
+						<button id="lionSuper" class="powerUpButton" accesskey="s">Super Lion!</button>
+						<button id="zebra" class="powerUpButton" accesskey="z">Zebra</button>					
+						<p id="powerText"></p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="py-0 my-0" id="about">
+			<div class="container sec">
+				<div class="row">
 					<h2>About</h2>
 					<p>Posted at <time>2018-01-19</time></p>
-				</header>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam ullam a iusto, tempora quas expedita nemo, doloremque, incidunt eveniet architecto molestiae voluptatibus quae quaerat hic possimus? Eius, a ab quis.</p>
-			</article>
+				</div>
+				<div class="row">			
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam ullam a iusto, tempora quas expedita nemo, doloremque, incidunt eveniet architecto molestiae voluptatibus quae quaerat hic possimus? Eius, a ab quis.</p>
+				</div>
+			</div>
 		</section>
-		<!-- sidfot -->
-		<footer>
-			<p>Sidan skapad av Jens <a href="#top">Back to top</a></p>
-		</footer>
 	</main>
-	<script src="spel.js"></script>
+	<footer>
+		<p>Sidan skapad av Jens <a href="#top">Back to top</a></p>
+	</footer>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="js/spel.js"></script>
 </body>
 </html>

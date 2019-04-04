@@ -1,0 +1,28 @@
+body {
+    text-align: center;
+}
+#bank {
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+button {
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+}        
+#game {
+    font-size: 8em;
+    height: 500px;
+    width: 500px;
+    border-radius: 300px;
+    background-image: url('../images/he-man-3.jpg');
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+#game:active {
+
+}        
+button:focus {
+    outline: 0px;
+}
